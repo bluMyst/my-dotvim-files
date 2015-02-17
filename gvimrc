@@ -1,0 +1,22 @@
+" There are a number of options which only have meaning in the GUI version of
+" Vim.  These are 'guicursor', 'guifont', 'guipty' and 'guioptions'.  They are
+" documented in |options.txt| with all the other options.
+
+" use this command to try some out:
+" :Unite -auto-preview colorscheme
+colorscheme candy
+
+" Unknown, but kept:
+set guioptions='e'
+
+" [G]rey inactive menu items and allow menu items to be [t]orn away.
+set guioptions+='gt'
+
+" Use console dialogs instead of popup dialogs for simple choices.
+set guioptions+='c'
+
+" Set font.
+set guifont=DejaVu\ Sans\ Mono\ Book\ 11
+
+" Configure the cursor.
+set guicursor+=a:blinkon0 " No blinking in (a)ll modes.
