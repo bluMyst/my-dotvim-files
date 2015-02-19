@@ -159,6 +159,10 @@ set expandtab shiftwidth=4 softtabstop=4
 
 " Mappings {{{1
 
+" easy editing of vimrc
+" also see gvimrc for \g mapping that does the same.
+nmap <Leader>v :edit $MYVIMRC<CR>
+
 " F5 lets you view an undo history tree
 nnoremap <F5> :GundoToggle<CR>
 

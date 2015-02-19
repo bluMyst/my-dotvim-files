@@ -2,6 +2,13 @@
 " Vim.  These are 'guicursor', 'guifont', 'guipty' and 'guioptions'.  They are
 " documented in |options.txt| with all the other options.
 
+if has("autocmd")
+    autocmd BufWritePost gvimrc source $MYGVIMRC
+endif
+
+" for easy editing of gvimrc.
+nmap <Leader>g :edit $MYGVIMRC<CR>
+
 " use this command to try some out:
 " :Unite -auto-preview colorscheme
 colorscheme candy
