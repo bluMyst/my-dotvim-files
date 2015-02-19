@@ -1,5 +1,5 @@
 " vim: foldmethod=marker
-" Ahto's custom options. {{{1
+" bluMyst's custom options. {{{1
 " explicitely show certain invisible characters
 set list listchars=tab:>-,trail:~,extends:>,precedes:<
 
