@@ -8,13 +8,19 @@ set list listchars=tab:>-,trail:~,extends:>,precedes:<
 " then on the second press of tab let the user choose from the list
 set wildmode=longest:full,full
 
-function TryE2Highlight()
-    if getline(1) =~ '\v^\@(name|inputs|outputs|persist|trigger|model)>'
-        set filetype=e2
-    endif
-endfunction
-" BufReadPost = starting to edit a new buffer, after reading the file
-autocmd BufReadPost *.txt call TryE2Highlight()
+" TODO: fix this from showing an error
+if !exists("*TryE2Highlight")
+    function TryE2Highlight()
+        if getline(1) =~ '\v^\@(name|inputs|outputs|persist|trigger|model)>'
+            set filetype=e2
+        endif
+    endfunction
+endif
+
+if has("autocmd")
+    autocmd BufReadPost *.txt call TryE2Highlight()
+    autocmd BufWritePost vimrc source $MYVIMRC
+endif
 
 " Activate pathogen plugin manager.
 execute pathogen#infect()
@@ -156,11 +162,10 @@ set expandtab shiftwidth=4 softtabstop=4
 " F5 lets you view an undo history tree
 nnoremap <F5> :GundoToggle<CR>
 
-" space can toggle folds open/closed
+" space can toggle folds
 nnoremap <Space> za
 vnoremap <Space> za
 
-" Map Y to act like D and C, not yy like default.
 map Y y$
 
 nmap \p "+p
@@ -171,11 +176,15 @@ vmap \P "+P
 " <C-L> also disables search highlighting.
 nnoremap <C-L> :nohl<CR><C-L>
 
+" Lets you align things like this
+" asdf:  foobar
+" b:     baz
 nmap <Tab>= :Tabularize /=<CR>
 vmap <Tab>= :Tabularize /=<CR>
 
 nmap <Tab>: :Tabularize /:\zs<CR>
 vmap <Tab>: :Tabularize /:\zs<CR>
 
+" interactivly shows you the effects an :s command will have
 nmap <Leader>o :OverCommandLine<CR>
 vmap <Leader>o :OverCommandLine<CR>
