@@ -26,7 +26,7 @@ endif
 execute pathogen#infect()
 
 " disabled except in gvim because terminal colors get messed up
-colorscheme default
+" colorscheme
 
 " Features {{{1
 "

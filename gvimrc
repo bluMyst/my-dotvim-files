@@ -11,7 +11,11 @@ nmap <Leader>g :edit $MYGVIMRC<CR>
 
 " use this command to try some out:
 " :Unite -auto-preview colorscheme
-colorscheme candy
+" To see the current one:
+" :colorscheme
+" To paste it in:
+" "=g:colors_name<CR>p
+colorscheme oceanblack
 
 " Unknown, but kept:
 set guioptions='e'
@@ -23,7 +27,7 @@ set guioptions+='gt'
 set guioptions+='c'
 
 " Set font.
-set guifont=DejaVu\ Sans\ Mono\ Book\ 11
+set guifont=DejaVu\ Sans\ Mono\ Book\ 10
 
 " Configure the cursor.
 set guicursor+=a:blinkon0 " No blinking in (a)ll modes.
