@@ -10,3 +10,12 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-over"]
+	path = bundle/vim-over
+	url = https://github.com/osyo-manga/vim-over.git
+[submodule "bundle/vim-visual-star-search"]
+	path = bundle/vim-visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
