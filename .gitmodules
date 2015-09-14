@@ -34,3 +34,6 @@
 [submodule "bundle/unite-colorscheme"]
 	path = bundle/unite-colorscheme
 	url = https://github.com/ujihisa/unite-colorscheme.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
