@@ -172,10 +172,13 @@ vnoremap <Space> za
 
 map Y y$
 
-nmap \p "+p
-vmap \p "+p
-nmap \P "+P
-vmap \P "+P
+nmap <Leader>y :%y+
+vmap <Leader>y "+y
+
+nmap <Leader>p "+p
+vmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>P "+P
 
 " <C-L> also disables search highlighting.
 nnoremap <C-L> :nohl<CR><C-L>
