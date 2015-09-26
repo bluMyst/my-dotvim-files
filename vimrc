@@ -192,6 +192,9 @@ vmap <Tab>= :Tabularize /=<CR>
 nmap <Tab>: :Tabularize /:\zs<CR>
 vmap <Tab>: :Tabularize /:\zs<CR>
 
+nmap <Tab>, :Tabularize /,\zs<CR>
+vmap <Tab>, :Tabularize /,\zs<CR>
+
 " interactivly shows you the effects an :s command will have
 nmap <Leader>o :OverCommandLine<CR>
 vmap <Leader>o :OverCommandLine<CR>
