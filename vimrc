@@ -1,7 +1,9 @@
 " vim: foldmethod=marker
 " bluMyst's custom options. {{{1
 " Wrapped lines have the same level of indentation.
-set breakindent
+if exists("&breakindent")
+    set breakindent
+endif
 
 " explicitely show certain invisible characters
 set list listchars=tab:>-,trail:~,extends:>,precedes:<
