@@ -30,6 +30,10 @@ endif
 " Activate pathogen plugin manager.
 execute pathogen#infect()
 
+" No UltiSnips popup.
+let g:UltiSnipsNoPythonWarning = 1
+
+
 " disabled except in gvim because terminal colors get messed up
 " colorscheme
 
