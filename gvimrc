@@ -27,7 +27,9 @@ set guioptions+='gt'
 set guioptions+='c'
 
 " Set font.
-set guifont=DejaVu\ Sans\ Mono\ Book\ 10,DejaVu\ Sans\ Mono\ Book,Consolas
+" Windows uses [font name]:h[height size]
+" Linux uses [font name]\ [size]
+set guifont=DejaVu\ Sans\ Mono\ Book\ 10,DejaVu\ Sans\ Mono\ Book:h10,Consolas:h11,Consolas
 
 " Configure the cursor.
 set guicursor+=a:blinkon0 " No blinking in (a)ll modes.
