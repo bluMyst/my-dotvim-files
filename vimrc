@@ -181,7 +181,7 @@ vnoremap <Space> za
 
 map Y y$
 
-nmap <Leader>y :%y+
+nmap <Leader>y :%y+<CR>
 vmap <Leader>y "+y
 
 nmap <Leader>p "+p
