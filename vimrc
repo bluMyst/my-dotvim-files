@@ -33,6 +33,7 @@ execute pathogen#infect()
 " No UltiSnips popup.
 let g:UltiSnipsNoPythonWarning = 1
 
+set display=lastline
 
 " disabled except in gvim because terminal colors get messed up
 " colorscheme
