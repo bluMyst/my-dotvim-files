@@ -2,9 +2,10 @@
 " Vim.  These are 'guicursor', 'guifont', 'guipty' and 'guioptions'.  They are
 " documented in |options.txt| with all the other options.
 
-if has("autocmd")
-    autocmd BufWritePost gvimrc source $MYGVIMRC
-endif
+" if you write a file multiple times, it'll get sourced multiple times in a row, which is really not good.
+"if has("autocmd")
+"    autocmd BufWritePost gvimrc source $MYGVIMRC
+"endif
 
 " for easy editing of gvimrc.
 nmap <Leader>g :edit $MYGVIMRC<CR>
@@ -29,7 +30,11 @@ set guioptions+='c'
 " Set font.
 " Windows uses [font name]:h[height size]
 " Linux uses [font name]\ [size]
-set guifont=DejaVu\ Sans\ Mono\ Book\ 10,DejaVu\ Sans\ Mono\ Book:h10,Consolas:h11,Consolas
+if has("gui_win32")
+    set guifont=DejaVu\ Sans\ Mono\ Book:h10,Consolas:h11,Consolas
+else
+    set guifont=DejaVu\ Sans\ Mono\ Book\ 10,Consolas\ 11,Consolas
+endif
 
 " Configure the cursor.
 set guicursor+=a:blinkon0 " No blinking in (a)ll modes.

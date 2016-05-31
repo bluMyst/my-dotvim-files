@@ -14,6 +14,7 @@ set list listchars=tab:>-,trail:~,extends:>,precedes:<
 set wildmode=longest:full,full
 
 " TODO: fix this from showing an error
+" Detect if .txt file is Expression 2 (Gmod Wiremod) code.
 if !exists("*TryE2Highlight")
     function TryE2Highlight()
         if getline(1) =~ '\v^\@(name|inputs|outputs|persist|trigger|model)>'
@@ -24,7 +25,10 @@ endif
 
 if has("autocmd")
     autocmd BufReadPost *.txt call TryE2Highlight()
-    autocmd BufWritePost vimrc source $MYVIMRC
+
+    " if you write a file multiple times, it'll get sourced multiple times in
+    " a row, which is really not good.
+    "autocmd BufWritePost vimrc source $MYVIMRC
 endif
 
 " Activate pathogen plugin manager.
