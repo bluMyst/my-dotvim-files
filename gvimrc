@@ -28,12 +28,12 @@ set guioptions+='gt'
 set guioptions+='c'
 
 " Set font.
-" Windows uses [font name]:h[height size]
-" Linux uses [font name]\ [size]
+" Windows uses Font_Name_Here:h[height size]
+" Linux uses Font\ Name\ [size]
 if has("gui_win32")
-    set guifont=DejaVu\ Sans\ Mono\ Book:h10,Consolas:h11,Consolas
+    set guifont=Inconsolata:h12,Consolas:h11,Consolas
 else
-    set guifont=DejaVu\ Sans\ Mono\ Book\ 10,Consolas\ 11,Consolas
+    set guifont=Inconsolata\ 12,Consolas\ 11,Consolas
 endif
 
 " Configure the cursor.
