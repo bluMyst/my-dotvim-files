@@ -16,7 +16,43 @@ nmap <Leader>g :edit $MYGVIMRC<CR>
 " :colorscheme
 " To paste it in:
 " "=g:colors_name<CR>p
-colorscheme oceanblack
+" some good color schemes to try:
+" black/dark background
+"colorscheme oceanblack
+"colorscheme candy
+"colorscheme candycode
+"colorscheme rdark
+colorscheme darkbone
+"colorscheme darkspectrum
+"colorscheme ir_black
+"colorscheme matrix
+"colorscheme neverness
+"colorscheme rootwater
+"colorscheme tir_black
+"colorscheme xoria256
+"colorscheme zmrok
+
+"colorscheme blacksea
+
+" grey/lightish background
+"colorscheme vydark
+"colorscheme molokai
+"colorscheme atom-dark
+"colorscheme anotherdark
+"colorscheme clarity
+"colorscheme dusk
+"colorscheme freya
+"colorscheme herald
+"colorscheme lucius
+"colorscheme maroloccio
+"colorscheme moria
+"colorscheme neon
+"colorscheme no_quarter
+"colorscheme night
+"colorscheme oceandeep
+
+" white/light background
+" colorscheme proton
 
 " Unknown, but kept:
 set guioptions='e'
@@ -36,5 +72,5 @@ else
     set guifont=Inconsolata\ 12,Consolas\ 11,Consolas
 endif
 
-" Configure the cursor.
-set guicursor+=a:blinkon0 " No blinking in (a)ll modes.
+" No blinking in (a)ll modes.
+set guicursor+=a:blinkon0
