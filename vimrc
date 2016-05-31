@@ -164,8 +164,7 @@ set notimeout ttimeout ttimeoutlen=200
 "------------------------------------------------------------
 " Indentation options {{{1
 
-" Do not change 'tabstop' from its default value of 8 with this setup.
-set expandtab shiftwidth=4 softtabstop=4
+set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 
 " Mappings {{{1
 
