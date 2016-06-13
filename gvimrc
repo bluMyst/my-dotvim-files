@@ -22,7 +22,7 @@ nmap <Leader>g :edit $MYGVIMRC<CR>
 "colorscheme candy
 "colorscheme candycode
 "colorscheme rdark
-colorscheme darkbone
+"colorscheme darkbone
 "colorscheme darkspectrum
 "colorscheme ir_black
 "colorscheme matrix
@@ -30,7 +30,7 @@ colorscheme darkbone
 "colorscheme rootwater
 "colorscheme tir_black
 "colorscheme xoria256
-"colorscheme zmrok
+colorscheme zmrok
 
 "colorscheme blacksea
 
