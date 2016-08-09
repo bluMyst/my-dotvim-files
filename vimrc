@@ -95,7 +95,8 @@ set showcmd
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 " Disabled - ahto
-set nohlsearch
+" Re-enabled lol
+set hlsearch
 
 " Show pattern matches as you type
 set incsearch
