@@ -25,12 +25,12 @@ nmap <Leader>g :edit $MYGVIMRC<CR>
 "colorscheme darkbone
 "colorscheme darkspectrum
 "colorscheme ir_black
+colorscheme tir_black
 "colorscheme matrix
 "colorscheme neverness
 "colorscheme rootwater
-"colorscheme tir_black
 "colorscheme xoria256
-colorscheme zmrok
+"colorscheme zmrok
 
 "colorscheme blacksea
 
