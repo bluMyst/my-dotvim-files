@@ -19,13 +19,9 @@ nmap <Leader>g :edit $MYGVIMRC<CR>
 " some good color schemes to try:
 " black/dark background
 "colorscheme oceanblack
-"colorscheme candy
+colorscheme candy
 "colorscheme candycode
-"colorscheme rdark
-"colorscheme darkbone
 "colorscheme darkspectrum
-"colorscheme ir_black
-colorscheme tir_black
 "colorscheme matrix
 "colorscheme neverness
 "colorscheme rootwater
