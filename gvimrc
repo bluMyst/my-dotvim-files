@@ -20,7 +20,6 @@ nmap <Leader>g :edit $MYGVIMRC<CR>
 " black/dark background
 "colorscheme oceanblack
 "colorscheme candy
-colorscheme badwolf
 "colorscheme candycode
 "colorscheme darkspectrum
 "colorscheme matrix
@@ -28,6 +27,10 @@ colorscheme badwolf
 "colorscheme rootwater
 "colorscheme xoria256
 "colorscheme zmrok
+
+" Installed separately:
+colorscheme badwolf
+"colorscheme dracula
 
 "colorscheme blacksea
 
