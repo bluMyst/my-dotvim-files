@@ -42,4 +42,4 @@
 	url = https://github.com/sjl/badwolf.git
 [submodule "bundle/vim"]
 	path = bundle/dracula-theme
-	url = git@github.com:dracula/vim.git
+	url = https://github.com/dracula/vim.git
