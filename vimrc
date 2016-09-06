@@ -1,6 +1,29 @@
 " vim: foldmethod=marker
 " bluMyst's custom options. {{{1
-" Wrapped lines have the same level of indentation.
+
+" when applicable, try to wrap things to 80 characters.
+set textwidth=80
+
+" automatically wrap comments to fit textwidth
+set formatoptions=c
+
+" Enables 'c' and automatically formats entire paragraphs at a time.
+set formatoptions+=a
+
+" Making a new line on a comment in insert mode will automatically become
+" another comment.
+set formatoptions+=r
+
+" Hitting O or o on a comment will make another comment too.
+set formatoptions+=o
+
+" gq works on comments
+set formatoptions+=q
+
+" Don't auto-break lines that are already too long.
+set formatoptions+=l
+
+" Soft wrapped lines have the same level of indentation.
 if exists("&breakindent")
     set breakindent
 endif
@@ -33,9 +56,6 @@ endif
 
 " Activate pathogen plugin manager.
 execute pathogen#infect()
-
-" No UltiSnips popup.
-let g:UltiSnipsNoPythonWarning = 1
 
 set display=lastline
 
