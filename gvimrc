@@ -54,11 +54,11 @@ colorscheme badwolf
 " white/light background
 " colorscheme proton
 
-" Unknown, but kept:
-set guioptions='e'
-
 " [G]rey inactive menu items and allow menu items to be [t]orn away.
-set guioptions+='gt'
+set guioptions='gt'
+
+" No gui tabs (not the character; think Firefox). Use normal command-line tabs.
+"set guioptions+='e'
 
 " Use console dialogs instead of popup dialogs for simple choices.
 set guioptions+='c'
