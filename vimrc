@@ -1,4 +1,6 @@
 " vim: foldmethod=marker
+" By the way, every now and then you should run :Helptags to update help to
+" include package stuff.
 " bluMyst's custom options. {{{1
 
 " when applicable, try to wrap things to 80 characters.
