@@ -1,3 +1,9 @@
 # examples:
 # https://github.com/github/gitignore/blob/master/Python.gitignore
 .netrwhist
+
+# Help file tags:
+doc/tags
+
+# Files open in vim will have a swap file with this format:
+.*.swp
