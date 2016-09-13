@@ -3,7 +3,8 @@
 .netrwhist
 
 # Help file tags:
-doc/tags
+# Doesn't work. :(
+#doc/tags
 
 # Files open in vim will have a swap file with this format:
 .*.swp
