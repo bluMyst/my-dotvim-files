@@ -3,27 +3,9 @@
 " include package stuff.
 " bluMyst's custom options. {{{1
 
-" when applicable, try to wrap things to 80 characters.
-set textwidth=80
-
-" automatically wrap comments to fit textwidth
-set formatoptions=c
-
-" Enables 'c' and automatically formats entire paragraphs at a time.
-set formatoptions+=a
-
-" Making a new line on a comment in insert mode will automatically become
-" another comment.
-set formatoptions+=r
-
-" Hitting O or o on a comment will make another comment too.
-set formatoptions+=o
-
-" gq works on comments
-set formatoptions+=q
-
-" Don't auto-break lines that are already too long.
-set formatoptions+=l
+" Highlight non-American English as being a regional spelling.
+" As opposed to just 'en', which accepts all spellings.
+set spelllang=en_us
 
 " Soft wrapped lines have the same level of indentation.
 if exists("&breakindent")
