@@ -12,8 +12,8 @@ if exists("&breakindent")
     set breakindent
 endif
 
-" explicitely show certain invisible characters
-set list listchars=tab:>-,trail:~,extends:>,precedes:<
+" explicitly show certain invisible characters
+set list listchars=tab:>-,trail:~,nbsp:&,extends:>,precedes:<
 
 " tab completion on ex commands
 " first complete as far as possible and show some options
