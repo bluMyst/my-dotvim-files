@@ -98,8 +98,6 @@ set showcmd
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
-" Disabled - ahto
-" Re-enabled lol
 set hlsearch
 
 " Show pattern matches as you type
@@ -178,7 +176,7 @@ set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 " Mappings {{{1
 
 " easy editing of vimrc
-" also see gvimrc for \g mapping that does the same.
+" also see gvimrc for <Leader>g mapping that does the same.
 nmap <Leader>v :edit $MYVIMRC<CR>
 
 " F5 lets you view an undo history tree
