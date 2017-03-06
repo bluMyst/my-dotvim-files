@@ -41,7 +41,13 @@ endif
 " Activate pathogen plugin manager.
 execute pathogen#infect()
 
+" Disable indentLine by default. It's only handy every now and then.
+let g:indentLine_enabled=0
+
 set display=lastline
+
+" Don't open files with folds already closed. Leave them open.
+set nofoldenable
 
 " disabled except in gvim because terminal colors get messed up
 " colorscheme
