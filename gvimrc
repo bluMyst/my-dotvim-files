@@ -61,7 +61,7 @@ set guioptions='gt'
 "set guioptions+='e'
 
 " Use console dialogs instead of popup dialogs for simple choices.
-set guioptions+='c'
+" set guioptions+='c'
 
 " Set font.
 " Windows uses Font_Name_Here:h[height size]
