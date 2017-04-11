@@ -2,6 +2,8 @@
 " By the way, every now and then you should run :Helptags to update help to
 " include package stuff.
 " bluMyst's custom options. {{{1
+set colorcolumn=80
+set nohlsearch
 
 " Highlight non-American English as being a regional spelling.
 " As opposed to just 'en', which accepts all spellings.
