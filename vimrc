@@ -5,6 +5,9 @@
 set colorcolumn=80
 set nohlsearch
 
+" Put one space after punctuation when using 'gq'
+set nojoinspaces
+
 " Highlight non-American English as being a regional spelling.
 " As opposed to just 'en', which accepts all spellings.
 set spelllang=en_us
