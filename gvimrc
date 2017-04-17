@@ -5,52 +5,10 @@
 " Good website for choosing a colorscheme:
 " http://colorswat.ch/vim/list
 
-" for easy editing of gvimrc.
-nmap <Leader>g :edit $MYGVIMRC<CR>
+" Unite -auto-preview colorscheme
+" See the plugins in vimrc for a list of colorschems you can choose from.
 
-" use this command to try some out:
-" :Unite -auto-preview colorscheme
-" To see the current one:
-" :colorscheme
-" To paste it in:
-" "=g:colors_name<CR>p
-" some good color schemes to try:
-" black/dark background
-"colorscheme oceanblack
-"colorscheme candy
-"colorscheme candycode
-"colorscheme darkspectrum
-"colorscheme matrix
-"colorscheme neverness
-"colorscheme rootwater
-"colorscheme xoria256
-"colorscheme zmrok
-
-" Installed separately:
-colorscheme badwolf
-"colorscheme dracula
-
-"colorscheme blacksea
-
-" grey/lightish background
-"colorscheme vydark
-"colorscheme molokai
-"colorscheme atom-dark
-"colorscheme anotherdark
-"colorscheme clarity
-"colorscheme dusk
-"colorscheme freya
-"colorscheme herald
-"colorscheme lucius
-"colorscheme maroloccio
-"colorscheme moria
-"colorscheme neon
-"colorscheme no_quarter
-"colorscheme night
-"colorscheme oceandeep
-
-" white/light background
-" colorscheme proton
+colorscheme mirodark
 
 " [G]rey inactive menu items and allow menu items to be [t]orn away.
 set guioptions='gt'

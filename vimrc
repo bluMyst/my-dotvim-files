@@ -20,40 +20,45 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular.git'
 
 " Adds commands like ]oh and [<Space>
-Plugin 'tpope/vim-surround.git'
+Plugin 'tpope/vim-surround'
 
 " Better statusline.
-Plugin 'vim-airline/vim-airline.git'
+" Disabled because you have to have a theme that supports it or the colors
+" won't match. There are colorschemes and airline colorschemes and you need
+" one of each.
+"Plugin 'vim-airline/vim-airline.git'
 
 " F5 undo history
-Plugin 'sjl/gundo.vim.git'
+Plugin 'sjl/gundo.vim'
 
 " These together let you have a live preview of colorschemes using:
 " Unite -auto-preview colorscheme
 Plugin 'Shougo/unite.vim'
-Plugin 'ujihisa/unite-colorscheme.git'
+Plugin 'ujihisa/unite-colorscheme'
 
 " Really good git frontend
-Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-fugitive'
 
 " Python folding
-Plugin 'tmhedberg/SimpylFold.git'
+Plugin 'tmhedberg/SimpylFold'
 
 " Colorschemes
-"Plugin 'luckydev/150colors.git'
-Plugin 'sjl/badwolf.git'
-Plugin 'dracula/vim.git'
+Plugin 'dracula/vim'
+Plugin 'AlessandroYorba/Sidonia'
+Plugin 'djjcast/mirodark'
+Plugin 'jpo/vim-railscasts-theme'
+Plugin 'arcticicestudio/nord-vim'
 
 " I don't even remember
-Plugin 'osyo-manga/vim-over.git'
-Plugin 'bronson/vim-visual-star-search.git'
-Plugin 'tpope/vim-unimpaired.git'
+Plugin 'osyo-manga/vim-over'
+Plugin 'bronson/vim-visual-star-search'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-abolish'
-Plugin 'mattn/emmet-vim.git'
-Plugin 'metakirby5/codi.vim.git'
-Plugin 'PProvost/vim-ps1.git'
-Plugin 'Yggdroot/indentLine.git'
-Plugin 'kchmck/vim-coffee-script.git'
+Plugin 'mattn/emmet-vim'
+Plugin 'metakirby5/codi.vim'
+Plugin 'PProvost/vim-ps1'
+Plugin 'Yggdroot/indentLine'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 filetype plugin indent on
@@ -246,6 +251,9 @@ set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 " easy editing of vimrc
 " also see gvimrc for <Leader>g mapping that does the same.
 nmap <Leader>v :edit $MYVIMRC<CR>
+
+" for easy editing of gvimrc.
+nmap <Leader>g :edit $MYGVIMRC<CR>
 
 " F5 lets you view an undo history tree
 nnoremap <F5> :GundoToggle<CR>
