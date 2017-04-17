@@ -2,7 +2,8 @@
 " Vim.  These are 'guicursor', 'guifont', 'guipty' and 'guioptions'.  They are
 " documented in |options.txt| with all the other options.
 
-" if you write a file multiple times, it'll get sourced multiple times in a row, which is really not good.
+" if you write a file multiple times, it'll get sourced multiple times in a
+" row, which is really not good.
 "if has("autocmd")
 "    autocmd BufWritePost gvimrc source $MYGVIMRC
 "endif

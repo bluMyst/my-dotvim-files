@@ -1,6 +1,64 @@
 " vim: foldmethod=marker
-" By the way, every now and then you should run :Helptags to update help to
-" include package stuff.
+" Vundle {{{1
+" Required, temporary settings. Just long enough to get Vundle to run!
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+if has('win32')
+    set rtp+=~/vimfiles/bundle/Vundle.vim
+elseif has('unix')
+    set rtp+=~/.vim/bundle/Vundle.vim
+endif
+call vundle#begin()
+
+" Vundle can manage and update itself. Cool!
+Plugin 'VundleVim/Vundle.vim'
+
+" Lets you align stuff with the tab key. (Actually the tab key part is because
+" of some keybinds in this file.)
+Plugin 'godlygeek/tabular.git'
+
+" Adds commands like ]oh and [<Space>
+Plugin 'tpope/vim-surround.git'
+
+" Better statusline.
+Plugin 'vim-airline/vim-airline.git'
+
+" F5 undo history
+Plugin 'sjl/gundo.vim.git'
+
+" These together let you have a live preview of colorschemes using:
+" Unite -auto-preview colorscheme
+Plugin 'Shougo/unite.vim'
+Plugin 'ujihisa/unite-colorscheme.git'
+
+" Really goot git frontend
+Plugin 'tpope/vim-fugitive.git'
+
+" Python folding
+Plugin 'tmhedberg/SimpylFold.git'
+
+" Colorschemes:
+Plugin 'luckydev/150colors.git'
+Plugin 'sjl/badwolf.git'
+Plugin 'dracula/vim.git'
+
+" I don't even remember:
+Plugin 'osyo-manga/vim-over.git'
+Plugin 'bronson/vim-visual-star-search.git'
+Plugin 'tpope/vim-unimpaired.git'
+Plugin 'tpope/vim-abolish'
+Plugin 'mattn/emmet-vim.git'
+Plugin 'metakirby5/codi.vim.git'
+Plugin 'PProvost/vim-ps1.git'
+Plugin 'Yggdroot/indentLine.git'
+Plugin 'kchmck/vim-coffee-script.git'
+
+call vundle#end()
+filetype plugin indent on
+
+"------------------------------------------------------------
 " bluMyst's custom options. {{{1
 set colorcolumn=80
 
@@ -42,9 +100,6 @@ if has("autocmd")
     "autocmd BufWritePost vimrc source $MYVIMRC
 endif
 
-" Activate pathogen plugin manager.
-execute pathogen#infect()
-
 " Disable indentLine by default. It's only handy every now and then.
 let g:indentLine_enabled=0
 
@@ -63,15 +118,18 @@ set nofoldenable
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
+" Note: Vundle requres nocompatible!
 set nocompatible
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
-filetype indent plugin on
+" Set by Vundle above, and required.
+" filetype indent plugin on
 
 " Enable syntax highlighting
 syntax on
+
 
 
 "------------------------------------------------------------
