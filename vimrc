@@ -33,18 +33,18 @@ Plugin 'sjl/gundo.vim.git'
 Plugin 'Shougo/unite.vim'
 Plugin 'ujihisa/unite-colorscheme.git'
 
-" Really goot git frontend
+" Really good git frontend
 Plugin 'tpope/vim-fugitive.git'
 
 " Python folding
 Plugin 'tmhedberg/SimpylFold.git'
 
-" Colorschemes:
-Plugin 'luckydev/150colors.git'
+" Colorschemes
+"Plugin 'luckydev/150colors.git'
 Plugin 'sjl/badwolf.git'
 Plugin 'dracula/vim.git'
 
-" I don't even remember:
+" I don't even remember
 Plugin 'osyo-manga/vim-over.git'
 Plugin 'bronson/vim-visual-star-search.git'
 Plugin 'tpope/vim-unimpaired.git'
