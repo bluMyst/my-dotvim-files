@@ -19,7 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 " of some keybinds in this file.)
 Plugin 'godlygeek/tabular.git'
 
-" Adds commands like ]oh and [<Space>
+" Lets you modify things inside brackets, parentheses, etc.
 Plugin 'tpope/vim-surround'
 
 " Better statusline.
@@ -33,14 +33,42 @@ Plugin 'sjl/gundo.vim'
 
 " These together let you have a live preview of colorschemes using:
 " Unite -auto-preview colorscheme
+" Also Unite is good for searching for files.
 Plugin 'Shougo/unite.vim'
 Plugin 'ujihisa/unite-colorscheme'
 
 " Really good git frontend
 Plugin 'tpope/vim-fugitive'
 
+" Adds commands like ]oh and [<Space>
+Plugin 'tpope/vim-unimpaired'
+
 " Python folding
 Plugin 'tmhedberg/SimpylFold'
+
+" Live-preview :s/foo/bar
+Plugin 'osyo-manga/vim-over'
+
+" Helps you keep your indentation consistent by drawing lines
+Plugin 'Yggdroot/indentLine'
+
+" HTML abbreviation engine
+"Plugin 'mattn/emmet-vim'
+
+" Syntax highlighting for different languages:
+Plugin 'PProvost/vim-ps1'
+Plugin 'kchmck/vim-coffee-script'
+
+" A programmer's scratchpad. Linux only!
+if has("unix")
+    Plugin 'metakirby5/codi.vim'
+endif
+
+" Makes * and # work on visual selections
+Plugin 'bronson/vim-visual-star-search'
+
+" Smarter find-and-replace.
+Plugin 'tpope/vim-abolish'
 
 " Colorschemes
 Plugin 'dracula/vim'
@@ -48,17 +76,6 @@ Plugin 'AlessandroYorba/Sidonia'
 Plugin 'djjcast/mirodark'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'arcticicestudio/nord-vim'
-
-" I don't even remember
-Plugin 'osyo-manga/vim-over'
-Plugin 'bronson/vim-visual-star-search'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-abolish'
-Plugin 'mattn/emmet-vim'
-Plugin 'metakirby5/codi.vim'
-Plugin 'PProvost/vim-ps1'
-Plugin 'Yggdroot/indentLine'
-Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 filetype plugin indent on
