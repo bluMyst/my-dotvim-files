@@ -3,7 +3,6 @@
 " include package stuff.
 " bluMyst's custom options. {{{1
 set colorcolumn=80
-set nohlsearch
 
 " Put one space after punctuation when using 'gq'
 set nojoinspaces
@@ -109,7 +108,7 @@ set showcmd
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
-set hlsearch
+set nohlsearch
 
 " Show pattern matches as you type
 set incsearch
