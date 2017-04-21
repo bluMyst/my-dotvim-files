@@ -15,6 +15,13 @@ call vundle#begin()
 " Vundle can manage and update itself. Cool!
 Plugin 'VundleVim/Vundle.vim'
 
+" Asynchronous Linting Engine
+" Vim 8+ only! :(
+Plugin 'w0rp/ale'
+
+" Python autocompletion
+Plugin 'davidhalter/jedi-vim'
+
 " Lets you align stuff with the tab key. (Actually the tab key part is because
 " of some keybinds in this file.)
 Plugin 'godlygeek/tabular.git'
@@ -76,6 +83,7 @@ Plugin 'AlessandroYorba/Sidonia'
 Plugin 'djjcast/mirodark'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'whatyouhide/vim-gotham'
 
 call vundle#end()
 filetype plugin indent on
