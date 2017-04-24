@@ -20,7 +20,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0rp/ale'
 
 " Python autocompletion
-Plugin 'davidhalter/jedi-vim'
+if has("python3") || has("python")
+    Plugin 'davidhalter/jedi-vim'
+endif
 
 " Lets you align stuff with the tab key. (Actually the tab key part is because
 " of some keybinds in this file.)
