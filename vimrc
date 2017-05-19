@@ -27,19 +27,27 @@ Plugin 'w0rp/ale'
 
 " Lets you align stuff with the tab key. (Actually the tab key part is because
 " of some keybinds in this file.)
-Plugin 'godlygeek/tabular.git'
+" Plugin 'godlygeek/tabular.git'
+" nmap <Tab>= :Tabularize /=<CR>
+" vmap <Tab>= :Tabularize /=<CR>
+"
+" nmap <Tab>: :Tabularize /:\zs<CR>
+" vmap <Tab>: :Tabularize /:\zs<CR>
+"
+" nmap <Tab>, :Tabularize /,\zs<CR>
+" vmap <Tab>, :Tabularize /,\zs<CR>
+
+" This align plugin looks way better:
+Plugin 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " Lets you modify things inside brackets, parentheses, etc.
 Plugin 'tpope/vim-surround'
 
-" Better statusline.
-" Disabled because you have to have a theme that supports it or the colors
-" won't match. There are colorschemes and airline colorschemes and you need
-" one of each.
-"Plugin 'vim-airline/vim-airline.git'
-
-" F5 undo history
-Plugin 'sjl/gundo.vim'
+" F5 undo history.
+" Disabled because I never use it.
+" Plugin 'sjl/gundo.vim'
 
 " These together let you have a live preview of colorschemes using:
 " Unite -auto-preview colorscheme
@@ -58,9 +66,12 @@ Plugin 'tmhedberg/SimpylFold'
 
 " Live-preview :s/foo/bar
 Plugin 'osyo-manga/vim-over'
+nmap <Leader>o :OverCommandLine<CR>
+vmap <Leader>o :OverCommandLine<CR>
 
 " Helps you keep your indentation consistent by drawing lines
 Plugin 'Yggdroot/indentLine'
+nmap <Leader>i :IndentLinesToggle<CR>
 
 " HTML abbreviation engine
 "Plugin 'mattn/emmet-vim'
@@ -79,6 +90,15 @@ Plugin 'bronson/vim-visual-star-search'
 
 " Smarter find-and-replace.
 Plugin 'tpope/vim-abolish'
+
+" Comment and uncomment with "gc"
+Plugin 'tpope/vim-commentary'
+
+" Search by two characters
+Plugin 'justinmk/vim-sneak'
+
+" Incrementally highlight ALL matches to search.
+Plugin 'haya14busa/incsearch.vim'
 
 " Colorschemes
 Plugin 'dracula/vim'
@@ -276,15 +296,9 @@ set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 
 " Mappings {{{1
 
-" easy editing of vimrc
-" also see gvimrc for <Leader>g mapping that does the same.
+" easy editing of vimrc and gvimrc
 nmap <Leader>v :edit $MYVIMRC<CR>
-
-" for easy editing of gvimrc.
 nmap <Leader>g :edit $MYGVIMRC<CR>
-
-" F5 lets you view an undo history tree
-nnoremap <F5> :GundoToggle<CR>
 
 " space can toggle folds
 nnoremap <Space> za
@@ -302,19 +316,3 @@ vmap <Leader>P "+P
 
 " <C-L> also disables search highlighting.
 nnoremap <C-L> :nohl<CR><C-L>
-
-" Lets you align things like this
-" asdf:  foobar
-" b:     baz
-nmap <Tab>= :Tabularize /=<CR>
-vmap <Tab>= :Tabularize /=<CR>
-
-nmap <Tab>: :Tabularize /:\zs<CR>
-vmap <Tab>: :Tabularize /:\zs<CR>
-
-nmap <Tab>, :Tabularize /,\zs<CR>
-vmap <Tab>, :Tabularize /,\zs<CR>
-
-" interactivly shows you the effects an :s command will have
-nmap <Leader>o :OverCommandLine<CR>
-vmap <Leader>o :OverCommandLine<CR>
