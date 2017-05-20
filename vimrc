@@ -1,33 +1,21 @@
 " vim: foldmethod=marker
-" Vundle {{{1
-" Required, temporary settings. Just long enough to get Vundle to run!
-set nocompatible
-filetype off
-
-" set the runtime path to include Vundle and initialize
-if has('win32')
-    set rtp+=~/vimfiles/bundle/Vundle.vim
-elseif has('unix')
-    set rtp+=~/.vim/bundle/Vundle.vim
-endif
-call vundle#begin()
-
-" Vundle can manage and update itself. Cool!
-Plugin 'VundleVim/Vundle.vim'
+" plug-vim {{{1
+call plug#begin()
+" Remember to use single-quotes!
 
 " Asynchronous Linting Engine
 " Vim 8+ only! :(
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 
 " Python autocompletion
 " Too many bugs and issues.
 "if has("python3") || has("python")
-"    Plugin 'davidhalter/jedi-vim'
+"    Plug 'davidhalter/jedi-vim'
 "endif
 
 " Lets you align stuff with the tab key. (Actually the tab key part is because
 " of some keybinds in this file.)
-" Plugin 'godlygeek/tabular.git'
+" Plug 'godlygeek/tabular.git'
 " nmap <Tab>= :Tabularize /=<CR>
 " vmap <Tab>= :Tabularize /=<CR>
 "
@@ -38,77 +26,77 @@ Plugin 'w0rp/ale'
 " vmap <Tab>, :Tabularize /,\zs<CR>
 
 " This align plugin looks way better:
-Plugin 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align'
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Lets you modify things inside brackets, parentheses, etc.
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " F5 undo history.
 " Disabled because I never use it.
-" Plugin 'sjl/gundo.vim'
+" Plug 'sjl/gundo.vim'
 
 " These together let you have a live preview of colorschemes using:
 " Unite -auto-preview colorscheme
 " Also Unite is good for searching for files.
-Plugin 'Shougo/unite.vim'
-Plugin 'ujihisa/unite-colorscheme'
+Plug 'Shougo/unite.vim'
+Plug 'ujihisa/unite-colorscheme'
 
 " Really good git frontend
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Adds commands like ]oh and [<Space>
-Plugin 'tpope/vim-unimpaired'
+Plug 'tpope/vim-unimpaired'
 
 " Python folding
-Plugin 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold'
 
 " Live-preview :s/foo/bar
-Plugin 'osyo-manga/vim-over'
+Plug 'osyo-manga/vim-over'
 nmap <Leader>o :OverCommandLine<CR>
 vmap <Leader>o :OverCommandLine<CR>
 
 " Helps you keep your indentation consistent by drawing lines
-Plugin 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 nmap <Leader>i :IndentLinesToggle<CR>
 
 " HTML abbreviation engine
-"Plugin 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 
 " Syntax highlighting for different languages:
-Plugin 'PProvost/vim-ps1'
-Plugin 'kchmck/vim-coffee-script'
+Plug 'PProvost/vim-ps1'
+Plug 'kchmck/vim-coffee-script'
 
 " A programmer's scratchpad. Linux only!
 if has("unix")
-    Plugin 'metakirby5/codi.vim'
+    Plug 'metakirby5/codi.vim'
 endif
 
 " Makes * and # work on visual selections
-Plugin 'bronson/vim-visual-star-search'
+Plug 'bronson/vim-visual-star-search'
 
 " Smarter find-and-replace.
-Plugin 'tpope/vim-abolish'
+Plug 'tpope/vim-abolish'
 
 " Comment and uncomment with "gc"
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " Search by two characters
-Plugin 'justinmk/vim-sneak'
+Plug 'justinmk/vim-sneak'
 
 " Incrementally highlight ALL matches to search.
-Plugin 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch.vim'
 
 " Colorschemes
-Plugin 'dracula/vim'
-Plugin 'AlessandroYorba/Sidonia'
-Plugin 'djjcast/mirodark'
-Plugin 'jpo/vim-railscasts-theme'
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'whatyouhide/vim-gotham'
+Plug 'dracula/vim'
+Plug 'AlessandroYorba/Sidonia'
+Plug 'djjcast/mirodark'
+Plug 'jpo/vim-railscasts-theme'
+Plug 'arcticicestudio/nord-vim'
+Plug 'whatyouhide/vim-gotham'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 "------------------------------------------------------------
