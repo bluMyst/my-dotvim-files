@@ -18,6 +18,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Asynchronous Linting Engine
 " Vim 8+ only! :(
 Plugin 'w0rp/ale'
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Python autocompletion
 " Too many bugs and issues.
@@ -137,20 +139,25 @@ set wildmode=longest:full,full
 
 " TODO: fix this from showing an error
 " Detect if .txt file is Expression 2 (Gmod Wiremod) code.
-if !exists("*TryE2Highlight")
-    function TryE2Highlight()
-        if getline(1) =~ '\v^\@(name|inputs|outputs|persist|trigger|model)>'
-            set filetype=e2
-        endif
-    endfunction
-endif
+" if !exists("*TryE2Highlight")
+"     function TryE2Highlight()
+"         if getline(1) =~ '\v^\@(name|inputs|outputs|persist|trigger|model)>'
+"             set filetype=e2
+"         endif
+"     endfunction
+" endif
 
 if has("autocmd")
-    autocmd BufReadPost *.txt call TryE2Highlight()
+    " autocmd BufReadPost *.txt call TryE2Highlight()
 
-    " if you write a file multiple times, it'll get sourced multiple times in
+    " If you write a file multiple times, it'll get sourced multiple times in
     " a row, which is really not good.
-    "autocmd BufWritePost vimrc source $MYVIMRC
+    "
+    " Are you sure, me-from-the-past? I've done this successfully before.
+    "
+    " Okay maybe I knew what I was talking about. After awhile I think it
+    " starts to freeze.
+    " autocmd BufWritePost vimrc source $MYVIMRC
 endif
 
 " Disable indentLine by default. It's only handy every now and then.
