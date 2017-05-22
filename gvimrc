@@ -2,12 +2,16 @@
 " Vim.  These are 'guicursor', 'guifont', 'guipty' and 'guioptions'.  They are
 " documented in |options.txt| with all the other options.
 
+" Automatically source gvimrc on write from inside vim.
+" if has("autocmd")
+"     autocmd BufWritePost gvimrc source $MYVIMRC
+" endif
+
 " Good website for choosing a colorscheme:
 " http://colorswat.ch/vim/list
 
 " Unite -auto-preview colorscheme
 " See the plugins in vimrc for a list of colorschems you can choose from.
-
 colorscheme mirodark
 
 " [G]rey inactive menu items and allow menu items to be [t]orn away.
