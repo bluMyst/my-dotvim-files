@@ -3,6 +3,6 @@
 # No swap files
 .*.swp
 
-# No bundle files (except Vundle itself), because they're handeled by Vundle.
-bundle/*
-bundle/Vundle.vim!
+# Ignore the plugged directory because it's for local copies of addons that Plug
+# is managing.
+plugged/*
