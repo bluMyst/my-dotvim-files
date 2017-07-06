@@ -29,7 +29,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " nmap <Tab>, :Tabularize /,\zs<CR>
 " vmap <Tab>, :Tabularize /,\zs<CR>
 
-" This align plugin looks way better:
+" This align plugin looks way better than Tabularize:
 Plug 'junegunn/vim-easy-align'
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -87,6 +87,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 
 " Search by two characters
+" s{char}{char}
 Plug 'justinmk/vim-sneak'
 
 " Incrementally highlight ALL matches to search.
