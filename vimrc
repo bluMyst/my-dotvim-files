@@ -5,6 +5,7 @@ call plug#begin()
 
 " Asynchronous Linting Engine
 " Vim 8+ only! :(
+" Using flake8 as the linter for Python
 Plug 'w0rp/ale'
 let g:ale_lint_on_text_changed = 'never'
 nmap <silent> <Leader>a :ALELint<CR>
