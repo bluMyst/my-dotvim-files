@@ -96,7 +96,6 @@ Plug 'haya14busa/incsearch.vim'
 
 " Colorschemes
 Plug 'dracula/vim'
-Plug 'AlessandroYorba/Sidonia'
 Plug 'djjcast/mirodark'
 Plug 'jpo/vim-railscasts-theme'
 Plug 'arcticicestudio/nord-vim'
