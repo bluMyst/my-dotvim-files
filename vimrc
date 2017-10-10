@@ -72,6 +72,7 @@ nmap <Leader>i :IndentLinesToggle<CR>
 " Syntax highlighting for different languages:
 Plug 'PProvost/vim-ps1'
 Plug 'kchmck/vim-coffee-script'
+Plug 'kompowiec/CBOT.vim'
 
 " A programmer's scratchpad. Linux only!
 if has("unix")
