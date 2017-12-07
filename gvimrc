@@ -27,9 +27,9 @@ set guioptions='gt'
 " Windows uses Font_Name_Here:h[height size]
 " Linux uses Font\ Name\ [size]
 if has("gui_win32")
-    set guifont=Inconsolata:h12,Consolas:h11,Consolas
+    set guifont=InputMono:h12,Consolas:h11,Consolas
 else
-    set guifont=Inconsolata\ 12,Consolas\ 11,Consolas
+    set guifont=InputMono\ 12,Consolas\ 11,Consolas
 endif
 
 " No blinking in (a)ll modes.
