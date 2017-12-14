@@ -3,6 +3,11 @@
 call plug#begin()
 " Remember to use single-quotes!
 
+" A personal wiki system for vim. Saves in ~/vimwiki by default.
+" Can change the location by editing g:vimwiki_list.
+" <Leader>ww
+Plug 'vimwiki/vimwiki'
+
 " Asynchronous Linting Engine
 " Vim 8+ only! :(
 " Using flake8 as the linter for Python
