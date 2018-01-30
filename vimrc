@@ -112,8 +112,8 @@ filetype plugin indent on
 
 "------------------------------------------------------------
 " bluMyst's custom options. {{{1
-set colorcolumn=79
-set textwidth=79
+set colorcolumn=0
+set textwidth=0
 
 " Put one space after punctuation when using 'gq'
 set nojoinspaces
