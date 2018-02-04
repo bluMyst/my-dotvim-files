@@ -50,8 +50,8 @@ Plug 'tpope/vim-surround'
 " These together let you have a live preview of colorschemes using:
 " Unite -auto-preview colorscheme
 " Also Unite is good for searching for files.
-Plug 'Shougo/unite.vim'
-Plug 'ujihisa/unite-colorscheme'
+" Plug 'Shougo/unite.vim'
+" Plug 'ujihisa/unite-colorscheme'
 
 " Really good git frontend
 Plug 'tpope/vim-fugitive'
@@ -60,7 +60,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 
 " Python folding
-Plug 'tmhedberg/SimpylFold'
+" Plug 'tmhedberg/SimpylFold'
 
 " Live-preview :s/foo/bar
 Plug 'osyo-manga/vim-over'
@@ -68,8 +68,8 @@ nmap <Leader>o :OverCommandLine<CR>
 vmap <Leader>o :OverCommandLine<CR>
 
 " Helps you keep your indentation consistent by drawing lines
-Plug 'Yggdroot/indentLine'
-nmap <Leader>i :IndentLinesToggle<CR>
+" Plug 'Yggdroot/indentLine'
+" nmap <Leader>i :IndentLinesToggle<CR>
 
 " HTML abbreviation engine
 "Plug 'mattn/emmet-vim'
@@ -98,7 +98,7 @@ Plug 'tpope/vim-commentary'
 Plug 'justinmk/vim-sneak'
 
 " Incrementally highlight ALL matches to search.
-Plug 'haya14busa/incsearch.vim'
+" Plug 'haya14busa/incsearch.vim'
 
 " Colorschemes
 Plug 'dracula/vim'
@@ -117,6 +117,13 @@ set textwidth=0
 
 " Put one space after punctuation when using 'gq'
 set nojoinspaces
+
+" When encrypting files, use strongest encryption available. (see help for :X)
+if has('crypt-blowfish2')
+    set cryptmethod=blowfish2
+elseif has('crypt-blowfish')
+    set cryptmethod=blowfish
+endif
 
 " Highlight non-American English as being a regional spelling.
 " As opposed to just 'en', which accepts all spellings.
