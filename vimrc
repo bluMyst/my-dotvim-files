@@ -11,11 +11,12 @@ Plug 'vimwiki/vimwiki'
 " Asynchronous Linting Engine
 " Vim 8+ only! :(
 " Using flake8 as the linter for Python
-Plug 'w0rp/ale'
-let g:ale_lint_on_text_changed = 'never'
-nmap <silent> <Leader>a :ALELint<CR>
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" Disabled because OMG so much memory usage!
+" Plug 'w0rp/ale'
+" let g:ale_lint_on_text_changed = 'never'
+" nmap <silent> <Leader>a :ALELint<CR>
+" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Python autocompletion
 " Too many bugs and issues.
