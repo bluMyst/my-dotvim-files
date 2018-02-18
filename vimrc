@@ -11,7 +11,7 @@ Plug 'vimwiki/vimwiki'
 " Asynchronous Linting Engine
 " Vim 8+ only! :(
 " Using flake8 as the linter for Python
-" Disabled because OMG so much memory usage!
+" Disabled because OMG so much CPU usage!
 " Plug 'w0rp/ale'
 " let g:ale_lint_on_text_changed = 'never'
 " nmap <silent> <Leader>a :ALELint<CR>
