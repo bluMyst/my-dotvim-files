@@ -114,17 +114,14 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'whatyouhide/vim-gotham'
 
 call plug#end()
+
+" Why is this here? There's a place for this setting further down, which had to
+" be commented out.
 filetype plugin indent on
 
 "------------------------------------------------------------
 " bluMyst's custom options. {{{1
 set textwidth=79
-
-" Don't auto-wrap based on textwidth.
-" [j]oin comments intelligently
-" See :help fo-table for more info.
-" TODO: Wtf? Setting this here doesn't change anything.
-set formatoptions=qj
 
 " Put one space after punctuation when using 'gq'
 set nojoinspaces
@@ -153,32 +150,6 @@ set list listchars=tab:>-,trail:~,nbsp:&,extends:>,precedes:<
 " then on the second press of tab let the user choose from the list
 set wildmode=longest:full,full
 
-" TODO: fix this from showing an error
-" Detect if .txt file is Expression 2 (Gmod Wiremod) code.
-" if !exists("*TryE2Highlight")
-"     function TryE2Highlight()
-"         if getline(1) =~ '\v^\@(name|inputs|outputs|persist|trigger|model)>'
-"             set filetype=e2
-"         endif
-"     endfunction
-" endif
-
-if has("autocmd")
-    " autocmd BufReadPost *.txt call TryE2Highlight()
-
-    " If you write a file multiple times, it'll get sourced multiple times in
-    " a row, which is really not good.
-    "
-    " Are you sure, me-from-the-past? I've done this successfully before.
-    "
-    " Okay maybe I knew what I was talking about. After awhile I think it
-    " starts to freeze.
-    " autocmd BufWritePost vimrc source $MYVIMRC
-endif
-
-" Disable indentLine by default. It's only handy every now and then.
-let g:indentLine_enabled=0
-
 set display=lastline
 
 " Don't open files with folds already closed. Leave them open.
@@ -194,7 +165,6 @@ set nofoldenable
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
-" Note: Vundle requres nocompatible!
 set nocompatible
 
 " Attempt to determine the type of a file based on its name and possibly its
