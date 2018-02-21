@@ -118,8 +118,13 @@ filetype plugin indent on
 
 "------------------------------------------------------------
 " bluMyst's custom options. {{{1
-set colorcolumn=0
-set textwidth=0
+set textwidth=79
+
+" Don't auto-wrap based on textwidth.
+" [j]oin comments intelligently
+" See :help fo-table for more info.
+" TODO: Wtf? Setting this here doesn't change anything.
+set formatoptions=qj
 
 " Put one space after punctuation when using 'gq'
 set nojoinspaces
