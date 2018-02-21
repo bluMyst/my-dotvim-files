@@ -2,6 +2,11 @@
 " plug-vim {{{1
 call plug#begin()
 " Remember to use single-quotes!
+" Wait, why? You mean with the Plug command? That's probably what you mean. I
+" guess anything else and it would break.
+
+" Better gq and indentation in Python.
+Plug 'Vimjas/vim-python-pep8-indent'
 
 " A personal wiki system for vim. Saves in ~/vimwiki by default.
 " Can change the location by editing g:vimwiki_list.
