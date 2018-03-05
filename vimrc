@@ -1,45 +1,10 @@
 " vim: foldmethod=marker
 " plug-vim {{{1
 call plug#begin()
-" Remember to use single-quotes!
-" Wait, why? You mean with the Plug command? That's probably what you mean. I
-" guess anything else and it would break.
+" You have to use single-quotes on :Plug or it won't work.
 
 " Better gq and indentation in Python.
 Plug 'Vimjas/vim-python-pep8-indent'
-
-" A personal wiki system for vim. Saves in ~/vimwiki by default.
-" Can change the location by editing g:vimwiki_list.
-" <Leader>ww
-Plug 'vimwiki/vimwiki'
-
-" Asynchronous Linting Engine
-" Vim 8+ only! :(
-" Using flake8 as the linter for Python
-" Disabled because OMG so much CPU usage!
-" Plug 'w0rp/ale'
-" let g:ale_lint_on_text_changed = 'never'
-" nmap <silent> <Leader>a :ALELint<CR>
-" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-" nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" Python autocompletion
-" Too many bugs and issues.
-"if has("python3") || has("python")
-"    Plug 'davidhalter/jedi-vim'
-"endif
-
-" Lets you align stuff with the tab key. (Actually the tab key part is because
-" of some keybinds in this file.)
-" Plug 'godlygeek/tabular.git'
-" nmap <Tab>= :Tabularize /=<CR>
-" vmap <Tab>= :Tabularize /=<CR>
-"
-" nmap <Tab>: :Tabularize /:\zs<CR>
-" vmap <Tab>: :Tabularize /:\zs<CR>
-"
-" nmap <Tab>, :Tabularize /,\zs<CR>
-" vmap <Tab>, :Tabularize /,\zs<CR>
 
 " This align plugin looks way better than Tabularize:
 Plug 'junegunn/vim-easy-align'
@@ -48,10 +13,6 @@ nmap ga <Plug>(EasyAlign)
 
 " Lets you modify things inside brackets, parentheses, etc.
 Plug 'tpope/vim-surround'
-
-" F5 undo history.
-" Disabled because I never use it.
-" Plug 'sjl/gundo.vim'
 
 " These together let you have a live preview of colorschemes using:
 " Unite -auto-preview colorscheme
@@ -69,26 +30,16 @@ Plug 'tpope/vim-unimpaired'
 " Plug 'tmhedberg/SimpylFold'
 
 " Live-preview :s/foo/bar
-Plug 'osyo-manga/vim-over'
+" Plug is configured to only load this after the command :OverCommandLine gets
+" run for the first time. (see curly brackets)
+Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 nmap <Leader>o :OverCommandLine<CR>
 vmap <Leader>o :OverCommandLine<CR>
-
-" Helps you keep your indentation consistent by drawing lines
-" Plug 'Yggdroot/indentLine'
-" nmap <Leader>i :IndentLinesToggle<CR>
-
-" HTML abbreviation engine
-"Plug 'mattn/emmet-vim'
 
 " Syntax highlighting for different languages:
 Plug 'PProvost/vim-ps1'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kompowiec/CBOT.vim'
-
-" A programmer's scratchpad. Linux only!
-if has("unix")
-    Plug 'metakirby5/codi.vim'
-endif
 
 " Makes * and # work on visual selections
 Plug 'bronson/vim-visual-star-search'
@@ -103,15 +54,8 @@ Plug 'tpope/vim-commentary'
 " s{char}{char}
 Plug 'justinmk/vim-sneak'
 
-" Incrementally highlight ALL matches to search.
-" Plug 'haya14busa/incsearch.vim'
-
 " Colorschemes
-Plug 'dracula/vim'
-Plug 'djjcast/mirodark'
-Plug 'jpo/vim-railscasts-theme'
-Plug 'arcticicestudio/nord-vim'
-Plug 'whatyouhide/vim-gotham'
+Plug 'tomasr/molokai'
 
 call plug#end()
 
@@ -123,7 +67,7 @@ filetype plugin indent on
 " bluMyst's custom options. {{{1
 set textwidth=79
 
-" Put one space after punctuation when using 'gq'
+" Put one space (not two!) after punctuation when using 'gq'
 set nojoinspaces
 
 " When encrypting files, use strongest encryption available. (see help for :X)
@@ -142,13 +86,16 @@ if exists("&breakindent")
     set breakindent
 endif
 
-" explicitly show certain invisible characters
+" show certain invisible characters
 set list listchars=tab:>-,trail:~,nbsp:&,extends:>,precedes:<
 
 " tab completion on ex commands
 " first complete as far as possible and show some options
 " then on the second press of tab let the user choose from the list
 set wildmode=longest:full,full
+
+" Highlight the row that the cursor is on
+set cursorline
 
 set display=lastline
 
@@ -212,7 +159,7 @@ set showcmd
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
-set nohlsearch
+set hlsearch
 
 " Show pattern matches as you type
 set incsearch

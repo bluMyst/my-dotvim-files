@@ -10,9 +10,9 @@
 " Good website for choosing a colorscheme:
 " http://colorswat.ch/vim/list
 
-" Unite -auto-preview colorscheme
 " See the plugins in vimrc for a list of colorschems you can choose from.
-colorscheme mirodark
+"colorscheme mirodark
+colorscheme molokai
 
 " [G]rey inactive menu items and allow menu items to be [t]orn away.
 set guioptions='gt'
