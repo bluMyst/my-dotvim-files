@@ -1,33 +1,17 @@
 " vim: foldmethod=marker
-" plug-vim {{{1
+"------------------------------------------------------------
+" plug-vim plugins {{{1
 call plug#begin()
-" You have to use single-quotes on :Plug or it won't work.
+" You have to use single-quotes on :Plug commands or they won't work.
+
+" Creates text objects for braces, parens, etc.
+Plug 'tpope/vim-surround'
 
 " Better gq and indentation in Python.
 Plug 'Vimjas/vim-python-pep8-indent'
 
-" This align plugin looks way better than Tabularize:
-Plug 'junegunn/vim-easy-align'
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-
-" Lets you modify things inside brackets, parentheses, etc.
-Plug 'tpope/vim-surround'
-
-" These together let you have a live preview of colorschemes using:
-" Unite -auto-preview colorscheme
-" Also Unite is good for searching for files.
-" Plug 'Shougo/unite.vim'
-" Plug 'ujihisa/unite-colorscheme'
-
-" Really good git frontend
-Plug 'tpope/vim-fugitive'
-
-" Adds commands like ]oh and [<Space>
+" Adds commands like [oc and [<Space>
 Plug 'tpope/vim-unimpaired'
-
-" Python folding
-" Plug 'tmhedberg/SimpylFold'
 
 " Live-preview :s/foo/bar
 " Plug is configured to only load this after the command :OverCommandLine gets
@@ -35,6 +19,16 @@ Plug 'tpope/vim-unimpaired'
 Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 nmap <Leader>o :OverCommandLine<CR>
 vmap <Leader>o :OverCommandLine<CR>
+
+" Use spaces to line things up across columns. E.G.:
+" foo                    = 1337
+" muchLongerVariableName = 1234
+Plug 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" git frontend for vim
+Plug 'tpope/vim-fugitive'
 
 " Syntax highlighting for different languages:
 Plug 'PProvost/vim-ps1'
@@ -59,52 +53,13 @@ Plug 'tomasr/molokai'
 
 call plug#end()
 
-" Why is this here? There's a place for this setting further down, which had to
-" be commented out.
-filetype plugin indent on
+" > plug#end() automatically executes `filetype plugin indent on` and
+" > `syntax enable`. You can revert the settings after the call.
+"
+" Basically, think of it like having a different set of defaults.
+
 
 "------------------------------------------------------------
-" bluMyst's custom options. {{{1
-set textwidth=79
-
-" Put one space (not two!) after punctuation when using 'gq'
-set nojoinspaces
-
-" When encrypting files, use strongest encryption available. (see help for :X)
-if has('crypt-blowfish2')
-    set cryptmethod=blowfish2
-elseif has('crypt-blowfish')
-    set cryptmethod=blowfish
-endif
-
-" Highlight non-American English as being a regional spelling.
-" As opposed to just 'en', which accepts all spellings.
-set spelllang=en_us
-
-" Soft wrapped lines have the same level of indentation.
-if exists("&breakindent")
-    set breakindent
-endif
-
-" show certain invisible characters
-set list listchars=tab:>-,trail:~,nbsp:&,extends:>,precedes:<
-
-" tab completion on ex commands
-" first complete as far as possible and show some options
-" then on the second press of tab let the user choose from the list
-set wildmode=longest:full,full
-
-" Highlight the row that the cursor is on
-set cursorline
-
-set display=lastline
-
-" Don't open files with folds already closed. Leave them open.
-set nofoldenable
-
-" disabled except in gvim because terminal colors get messed up
-" colorscheme
-
 " Features {{{1
 "
 " These options and commands enable some very useful features in Vim, that
@@ -117,12 +72,12 @@ set nocompatible
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
-" Set by Vundle above, and required.
-" filetype indent plugin on
+filetype indent plugin on
 
 " Enable syntax highlighting
 syntax on
 
+set cursorline
 
 
 "------------------------------------------------------------
@@ -233,6 +188,42 @@ set notimeout ttimeout ttimeoutlen=200
 " Indentation options {{{1
 
 set expandtab shiftwidth=4 softtabstop=4 tabstop=4
+
+" bluMyst's custom options. {{{1
+set textwidth=79
+
+" Put one space (not two!) after punctuation when using 'gq'
+set nojoinspaces
+
+" When encrypting files, use strongest encryption available. (see help for :X)
+if has('crypt-blowfish2')
+    set cryptmethod=blowfish2
+elseif has('crypt-blowfish')
+    set cryptmethod=blowfish
+endif
+
+" Highlight non-American English as being a regional spelling.
+" As opposed to just 'en', which accepts all spellings.
+set spelllang=en_us
+
+" Soft wrapped lines have the same level of indentation.
+if exists("&breakindent")
+    set breakindent
+endif
+
+" show certain invisible characters
+set list listchars=tab:>-,trail:~,nbsp:&,extends:>,precedes:<
+
+" Tab completion on ex commands.
+" First, complete as far as possible and show some possibilities. Then, on the
+" second press of tab, let the user choose from the list.
+set wildmode=longest:full,full
+
+" This has something to do with the way text is displayed with 'nowrap'.
+set display=lastline
+
+" When opening a new file, have folds open by default.
+set nofoldenable
 
 " Mappings {{{1
 
