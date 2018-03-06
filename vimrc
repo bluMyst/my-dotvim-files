@@ -4,7 +4,7 @@
 call plug#begin()
 " You have to use single-quotes on :Plug commands or they won't work.
 
-" Creates text objects for braces, parens, etc.
+" Lets you change double quotes to single quotes, remove surrounding tags, etc.
 Plug 'tpope/vim-surround'
 
 " Better gq and indentation in Python.
@@ -224,6 +224,24 @@ set display=lastline
 
 " When opening a new file, have folds open by default.
 set nofoldenable
+
+" \t binding to open todo file view. {{{2
+
+" It wouldn't make sense to use this binding outside my desktop computer.
+if hostname() == "LILITH"
+    function OpenTodoFile()
+        cd ~/MEGA/Documents/
+        edit 5 media.txt
+        /1. /normal zt
+        43vsplit todo.txt
+        /-\{39}/norm jjzt
+        let @q = "|f]hrX"
+        let @w = "|f]hr "
+        let @e = "|f]hrO"
+    endfunction
+
+    nmap <Leader>t :call OpenTodoFile()<CR>
+endif
 
 " Mappings {{{1
 
