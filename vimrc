@@ -51,6 +51,46 @@ Plug 'justinmk/vim-sneak'
 " Colorschemes
 Plug 'tomasr/molokai'
 
+" A personal wiki for vim
+Plug 'vimwiki/vimwiki'
+
+" To look up a setting, run `:h vimwiki-option-<setting>`
+" These are all the default values
+let g:vimwiki_list = [{
+    \     'maxhi': 0,
+    \     'css_name': 'style.css',
+    \     'auto_export': 0,
+    \     'template_default': 'default',
+    \     'template_ext': '.tpl',
+    \     'nested_syntaxes': {},
+    \     'auto_toc': 0,
+    \     'auto_tags': 0,
+    \     'syntax': 'default',
+    \     'automatic_nested_syntaxes': 1,
+    \     'custom_wiki2html': '',
+    \     'index': 'index',
+    \     'ext': '.wiki',
+    \     'temp': 0,
+    \     'list_margin': -1,
+    \
+    \     'diary_index': 'diary',
+    \     'diary_header': 'Diary',
+    \     'diary_link_fmt': '%Y-%m-%d',
+    \     'diary_sort': 'desc',
+    \     'diary_rel_path': 'diary/'
+    \ }]
+
+if isdirectory($HOME . '/.vim/')
+    let s:vim_settings_folder = $HOME . '/.vim/'
+elseif isdirectory($HOME . '/vimfiles/')
+    let s:vim_settings_folder = $HOME . '/vimfiles/'
+endif
+
+let g:vimwiki_list[0]['path']          = s:vim_settings_folder . 'vimwiki/'
+let g:vimwiki_list[0]['path_html']     = s:vim_settings_folder . 'vimwiki/html/'
+let g:vimwiki_list[0]['template_path'] =
+    \ g:vimwiki_list[0]['path'] . 'templates/'
+
 call plug#end()
 
 " > plug#end() automatically executes `filetype plugin indent on` and
@@ -229,7 +269,7 @@ set nofoldenable
 
 " It wouldn't make sense to use this binding outside my desktop computer.
 if hostname() == "LILITH"
-    function OpenTodoFile()
+    function! OpenTodoFile()
         cd ~/MEGA/Documents/
         edit 5 media.txt
         /1. /normal zt

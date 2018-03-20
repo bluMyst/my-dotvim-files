@@ -6,3 +6,7 @@
 # Ignore the plugged directory because it's for local copies of addons that Plug
 # is managing.
 plugged/*
+
+# Ignore vimwiki-related directories
+# (instead, vimwiki data should be backed up to cloud storage)
+vimwiki/*
