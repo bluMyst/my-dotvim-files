@@ -31,9 +31,6 @@ Plug 'kompowiec/CBOT.vim'
 " Makes * and # work on visual selections
 Plug 'bronson/vim-visual-star-search'
 
-" Smarter find-and-replace.
-Plug 'tpope/vim-abolish'
-
 " Comment and uncomment with gc
 Plug 'tpope/vim-commentary'
 
