@@ -13,13 +13,6 @@ Plug 'Vimjas/vim-python-pep8-indent'
 " Adds commands like [oc and [<Space>
 Plug 'tpope/vim-unimpaired'
 
-" Live-preview :s/foo/bar
-" Plug is configured to only load this after the command :OverCommandLine gets
-" run for the first time. (see curly brackets)
-Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
-nmap <Leader>o :OverCommandLine<CR>
-vmap <Leader>o :OverCommandLine<CR>
-
 " Use spaces to line things up across columns. E.G.:
 " foo                    = 1337
 " muchLongerVariableName = 1234
@@ -41,7 +34,7 @@ Plug 'bronson/vim-visual-star-search'
 " Smarter find-and-replace.
 Plug 'tpope/vim-abolish'
 
-" Comment and uncomment with "gc"
+" Comment and uncomment with gc
 Plug 'tpope/vim-commentary'
 
 " Search by two characters
