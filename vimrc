@@ -23,6 +23,9 @@ nmap ga <Plug>(EasyAlign)
 " git frontend for vim
 Plug 'tpope/vim-fugitive'
 
+" 'incsearch' for :s, :sm, and :sno
+Plug 'markonm/traces.vim'
+
 " Syntax highlighting for different languages:
 Plug 'PProvost/vim-ps1'
 Plug 'kchmck/vim-coffee-script'
