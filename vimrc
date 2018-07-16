@@ -13,6 +13,9 @@ Plug 'Vimjas/vim-python-pep8-indent'
 " Adds commands like [oc and [<Space>
 Plug 'tpope/vim-unimpaired'
 
+" Remaps . so that it can repeat actions from vim-unimpaired and vim-surround
+Plug 'tpope/vim-repeat'
+
 " Use spaces to line things up across columns. E.G.:
 " foo                    = 1337
 " muchLongerVariableName = 1234
