@@ -225,8 +225,13 @@ set notimeout ttimeout ttimeoutlen=200
 
 set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 
-" bluMyst's custom options. {{{1
-set textwidth=79
+" Katie's custom options. {{{1
+" Soft wrap on words, not on characters. In other words: Don't do th
+" is.
+set linebreak
+
+" Don't auto-hard-wrap stuff.
+set textwidth=0
 
 " Put one space (not two!) after punctuation when using 'gq'
 set nojoinspaces
