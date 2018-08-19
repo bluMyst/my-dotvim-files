@@ -26,7 +26,7 @@ set guioptions='gt'
 " Set font.
 " Windows uses Font_Name_Here:h[height size]
 " Linux uses Font\ Name\ [size]
-if has("unix") && system("hostname -s") == "ahto-ideapad\n"
+if has("unix") && system("hostname -s") == "hermes\n"
     set guifont=InputMono\ 10,Consolas\ 11,Consolas
 elseif has("gui_win32")
     set guifont=InputMono:h12,Consolas:h11,Consolas
