@@ -4,6 +4,9 @@
 call plug#begin()
 " You have to use single-quotes on :Plug commands or they won't work.
 
+" Also you can't change certain settings within plug#begin() or they won't
+" work either. That's why there's a separate section for plugin settings.
+
 " Lets you change double quotes to single quotes, remove surrounding tags, etc.
 Plug 'tpope/vim-surround'
 
@@ -20,8 +23,6 @@ Plug 'tpope/vim-repeat'
 " foo                    = 1337
 " muchLongerVariableName = 1234
 Plug 'junegunn/vim-easy-align'
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 " git frontend for vim
 Plug 'tpope/vim-fugitive'
@@ -29,11 +30,12 @@ Plug 'tpope/vim-fugitive'
 " 'incsearch' for :s, :sm, and :sno
 Plug 'markonm/traces.vim'
 
-" Syntax highlighting for different languages:
+" Syntax highlighting for different languages {{{2
 Plug 'PProvost/vim-ps1'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafo/moonscript-vim'
 Plug 'kompowiec/CBOT.vim'
+" }}}2
 
 " Makes * and # work on visual selections
 Plug 'bronson/vim-visual-star-search'
@@ -50,6 +52,23 @@ Plug 'tomasr/molokai'
 
 " A personal wiki for vim
 Plug 'vimwiki/vimwiki'
+
+call plug#end()
+
+" > plug#end() automatically executes `filetype plugin indent on` and
+" > `syntax enable`. You can revert the settings after the call.
+"
+" Basically, think of it like having a different set of defaults.
+
+"------------------------------------------------------------
+" Plugin settings {{{1
+
+" Set custom comment string for markdown. Now we can use vim-surround on
+" markdown files!
+autocmd FileType markdown set commentstring=[]:#\ (%s)
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " To look up a setting, run `:h vimwiki-option-<setting>`
 " These are all the default values
@@ -88,12 +107,6 @@ let g:vimwiki_list[0]['path_html']     = s:vim_settings_folder . 'vimwiki/html/'
 let g:vimwiki_list[0]['template_path'] =
     \ g:vimwiki_list[0]['path'] . 'templates/'
 
-call plug#end()
-
-" > plug#end() automatically executes `filetype plugin indent on` and
-" > `syntax enable`. You can revert the settings after the call.
-"
-" Basically, think of it like having a different set of defaults.
 
 
 "------------------------------------------------------------
@@ -226,8 +239,14 @@ set notimeout ttimeout ttimeoutlen=200
 
 set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 
-" bluMyst's custom options. {{{1
-set textwidth=79
+"------------------------------------------------------------
+" Katie's custom options. {{{1
+" Soft wrap on words, not on characters. In other words: Don't do th
+" is.
+set linebreak
+
+" Don't auto-hard-wrap stuff.
+set textwidth=0
 
 " Put one space (not two!) after punctuation when using 'gq'
 set nojoinspaces
@@ -261,24 +280,6 @@ set display=lastline
 
 " When opening a new file, have folds open by default.
 set nofoldenable
-
-" \t binding to open todo file view. {{{2
-
-" It wouldn't make sense to use this binding outside my desktop computer.
-if hostname() == "LILITH"
-    function! OpenTodoFile()
-        cd ~/MEGA/Documents/
-        edit 5 media.txt
-        /1. /normal zt
-        43vsplit todo.txt
-        /-\{39}/norm jjzt
-        let @q = "|f]hrX"
-        let @w = "|f]hr "
-        let @e = "|f]hrO"
-    endfunction
-
-    nmap <Leader>t :call OpenTodoFile()<CR>
-endif
 
 " Mappings {{{1
 
