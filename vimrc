@@ -7,6 +7,11 @@ call plug#begin()
 " Also you can't change certain settings within plug#begin() or they won't
 " work either. That's why there's a separate section for plugin settings.
 
+
+" If you need Vim help for vim-plug itself (e.g. :help plug-options), register
+" vim-plug as a plugin.
+Plug 'junegunn/vim-plug'
+
 " Lets you change double quotes to single quotes, remove surrounding tags, etc.
 Plug 'tpope/vim-surround'
 
@@ -62,6 +67,9 @@ call plug#end()
 
 "------------------------------------------------------------
 " Plugin settings {{{1
+
+" Run the :Plug* commands in the current window
+let g:plug_window = "enew"
 
 " Set custom comment string for markdown. Now we can use vim-surround on
 " markdown files!
