@@ -32,6 +32,7 @@ Plug 'markonm/traces.vim'
 " Syntax highlighting for different languages:
 Plug 'PProvost/vim-ps1'
 Plug 'kchmck/vim-coffee-script'
+Plug 'leafo/moonscript-vim'
 Plug 'kompowiec/CBOT.vim'
 
 " Makes * and # work on visual selections
