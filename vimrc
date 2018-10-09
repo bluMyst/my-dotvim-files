@@ -42,6 +42,9 @@ Plug 'leafo/moonscript-vim'
 Plug 'kompowiec/CBOT.vim'
 " }}}2
 
+" Python autocomplete with jedi
+Plug 'davidhalter/jedi-vim'
+
 " Makes * and # work on visual selections
 Plug 'bronson/vim-visual-star-search'
 
