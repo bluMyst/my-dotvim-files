@@ -54,6 +54,8 @@ Plug 'justinmk/vim-sneak'
 
 " Colorschemes
 Plug 'tomasr/molokai'
+Plug 'dracula/vim'
+Plug 'fneu/breezy'
 
 " A personal wiki for vim
 Plug 'vimwiki/vimwiki'
@@ -172,7 +174,7 @@ set showcmd
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
-set hlsearch
+set nohlsearch
 
 " Show pattern matches as you type
 set incsearch
