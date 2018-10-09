@@ -11,8 +11,8 @@
 " http://colorswat.ch/vim/list
 
 " See the plugins in vimrc for a list of colorschems you can choose from.
-"colorscheme mirodark
-colorscheme molokai
+"colorscheme molokai
+colorscheme dracula
 
 " [G]rey inactive menu items and allow menu items to be [t]orn away.
 set guioptions='gt'
