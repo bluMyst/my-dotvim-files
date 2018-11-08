@@ -40,6 +40,7 @@ Plug 'PProvost/vim-ps1'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafo/moonscript-vim'
 Plug 'kompowiec/CBOT.vim'
+Plug 'sirtaj/vim-papyrus'
 " }}}2
 
 " Python autocomplete with jedi
@@ -257,6 +258,9 @@ set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 " Soft wrap on words, not on characters. In other words: Don't do th
 " is.
 set linebreak
+
+" When using Ctrl-X and Ctrl-A, don't treat numbers like 0062 as octal.
+set nrformats=bin,hex
 
 " Don't auto-hard-wrap stuff.
 set textwidth=0
