@@ -14,8 +14,15 @@
 "colorscheme molokai
 colorscheme dracula
 
-" [G]rey inactive menu items and allow menu items to be [t]orn away.
-set guioptions='gt'
+" Use [c]onsole dialogs instead of popup dialogs
+set guioptions='c'
+
+" [G]rey inactive menu items
+" Menu options can be [t]orn away
+set guioptions+='gmt'
+
+" Show [m]enu bar (you can edit it!)
+"set guioptions+='m'
 
 " No gui tabs (not the character; think Firefox). Use normal command-line tabs.
 "set guioptions+='e'
