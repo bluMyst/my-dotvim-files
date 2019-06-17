@@ -44,7 +44,7 @@ Plug 'sirtaj/vim-papyrus'
 " }}}2
 
 " Python autocomplete with jedi
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 
 " Makes * and # work on visual selections
 Plug 'bronson/vim-visual-star-search'
@@ -60,6 +60,10 @@ Plug 'justinmk/vim-sneak'
 Plug 'tomasr/molokai'
 Plug 'dracula/vim'
 Plug 'fneu/breezy'
+
+" Lets you live-preview colorschemes with :SCROLL
+" Plug 'vim-scripts/ScrollColors'
+" Disabled because it overwrites <Leader>p
 
 " A personal wiki for vim
 Plug 'vimwiki/vimwiki'
