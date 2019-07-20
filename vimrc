@@ -38,6 +38,7 @@ Plug 'markonm/traces.vim'
 " Syntax highlighting for different languages {{{2
 Plug 'PProvost/vim-ps1'
 Plug 'kchmck/vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
 Plug 'leafo/moonscript-vim'
 Plug 'kompowiec/CBOT.vim'
 Plug 'sirtaj/vim-papyrus'
