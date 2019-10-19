@@ -19,7 +19,7 @@ set guioptions='c'
 
 " [G]rey inactive menu items
 " Menu options can be [t]orn away
-set guioptions+='gmt'
+set guioptions+='gt'
 
 " Show [m]enu bar (you can edit it!)
 "set guioptions+='m'
