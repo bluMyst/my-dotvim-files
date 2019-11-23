@@ -69,6 +69,19 @@ Plug 'fneu/breezy'
 " A personal wiki for vim
 Plug 'vimwiki/vimwiki'
 
+" Programmer's scratchpad
+if has('unix')
+    Plug 'metakirby5/codi.vim'
+
+    " Use python3.7
+    let g:codi#interpreters = {
+        \ 'python': {
+            \ 'bin': 'python3.7',
+            \ 'prompt': '^\(>>>\|\.\.\.\) ',
+        \ },
+    \ }
+endif
+
 call plug#end()
 
 " > plug#end() automatically executes `filetype plugin indent on` and
