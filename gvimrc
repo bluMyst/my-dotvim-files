@@ -36,9 +36,9 @@ set guioptions+='gt'
 if has("unix") && system("hostname -s") == "hermes\n"
     set guifont=InputMono\ 10,Consolas\ 11,Consolas
 elseif has("gui_win32")
-    set guifont=InputMono:h12,Consolas:h11,Consolas
+    set guifont=InputMono:h11,Consolas:h11,Consolas
 else
-    set guifont=InputMono\ 12,Consolas\ 11,Consolas
+    set guifont=InputMono\ 11,Consolas\ 11,Consolas
 endif
 
 " No blinking in (a)ll modes.
