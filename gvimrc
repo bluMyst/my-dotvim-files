@@ -33,6 +33,8 @@ set guioptions+='gt'
 " Set font.
 " Windows uses Font_Name_Here:h[height size]
 " Linux uses Font\ Name\ [size]
+" NOTE: For vim-airline to work properly, we need a powerline-patched font
+" (InputMono is patched out-of-the-box)
 if has("unix") && system("hostname -s") == "hermes\n"
     set guifont=InputMono\ 10,Consolas\ 11,Consolas
 elseif has("gui_win32")
