@@ -7,3 +7,4 @@ setlocal formatoptions+=tc
 " Allows running and debugging
 nmap <F5> :up\|!python %<CR>
 nmap <F6> :up\|!python -m pdb %<CR>
+nmap <F7> :up\|!python -i %<CR>
