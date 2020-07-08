@@ -65,7 +65,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'tomasr/molokai'
 Plug 'dracula/vim'
 Plug 'fneu/breezy'
-Plug 'kyoz/purify'
 
 " Lets you live-preview colorschemes with :SCROLL
 " Plug 'vim-scripts/ScrollColors'

@@ -11,9 +11,7 @@
 " http://colorswat.ch/vim/list
 
 " See the plugins in vimrc for a list of colorschems you can choose from.
-"colorscheme molokai
-"colorscheme dracula
-colorscheme desert
+colorscheme molokai
 
 " Use [c]onsole dialogs instead of popup dialogs
 set guioptions='c'
