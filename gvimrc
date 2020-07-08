@@ -12,7 +12,8 @@
 
 " See the plugins in vimrc for a list of colorschems you can choose from.
 "colorscheme molokai
-colorscheme dracula
+"colorscheme dracula
+colorscheme desert
 
 " Use [c]onsole dialogs instead of popup dialogs
 set guioptions='c'

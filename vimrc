@@ -32,11 +32,6 @@ Plug 'junegunn/vim-easy-align'
 " git frontend for vim
 Plug 'tpope/vim-fugitive'
 
-" Prettified bottom bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_powerline_fonts = 0
-
 " 'incsearch' for :s, :sm, and :sno
 Plug 'markonm/traces.vim'
 
@@ -50,6 +45,7 @@ Plug 'sirtaj/vim-papyrus'
 " }}}2
 
 " Python autocomplete with jedi
+" Just errors out a lot and fucks up on Windows
 "Plug 'davidhalter/jedi-vim'
 
 " Makes * and # work on visual selections
@@ -57,6 +53,9 @@ Plug 'bronson/vim-visual-star-search'
 
 " Comment and uncomment with gc
 Plug 'tpope/vim-commentary'
+
+" . repeats everything - including plugin commands
+Plug 'tpope/vim-repeat'
 
 " Search by two characters
 " s{char}{char}
@@ -66,6 +65,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'tomasr/molokai'
 Plug 'dracula/vim'
 Plug 'fneu/breezy'
+Plug 'kyoz/purify'
 
 " Lets you live-preview colorschemes with :SCROLL
 " Plug 'vim-scripts/ScrollColors'
@@ -276,6 +276,9 @@ endif
 " Highlight non-American English as being a regional spelling.
 " As opposed to just 'en', which accepts all spellings.
 set spelllang=en_us
+
+" Set default encoding to utf-8 instead of latin1
+set encoding=utf-8
 
 " Soft wrapped lines have the same level of indentation.
 if exists("&breakindent")
