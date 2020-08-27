@@ -42,6 +42,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'leafo/moonscript-vim'
 Plug 'kompowiec/CBOT.vim'
 Plug 'sirtaj/vim-papyrus'
+Plug 'gabrielelana/vim-markdown'
 " }}}2
 
 " Python autocomplete with jedi
@@ -284,7 +285,7 @@ if exists("&breakindent")
     set breakindent
 endif
 
-" show certain invisible characters
+" show certain invisible characters like this:	 
 set list listchars=tab:>-,trail:~,nbsp:&,extends:>,precedes:<
 
 " Tab completion on ex commands.
@@ -297,6 +298,9 @@ set display=lastline
 
 " When opening a new file, have folds open by default.
 set nofoldenable
+
+" Show .nfo files' ascii art correctly
+autocmd BufReadPre *.nfo :setlocal fileencodings=cp437,utf-8
 
 " Mappings {{{1
 
