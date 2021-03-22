@@ -11,7 +11,7 @@
 " http://colorswat.ch/vim/list
 
 " See the plugins in vimrc for a list of colorschems you can choose from.
-colorscheme molokai
+colorscheme dracula
 
 " Use [c]onsole dialogs instead of popup dialogs
 set guioptions='c'
@@ -35,11 +35,14 @@ set guioptions+='gt'
 " NOTE: For vim-airline to work properly, we need a powerline-patched font
 " (InputMono is patched out-of-the-box)
 if has("unix") && system("hostname -s") == "hermes\n"
-    set guifont=InputMono\ 10,Consolas\ 11,Consolas
+    " set guifont=InputMono\ 10,Consolas\ 11,Consolas
+    set guifont=Noto\ Mono\ 10,Consolas\ 11,Consolas
 elseif has("gui_win32")
-    set guifont=InputMono:h11,Consolas:h11,Consolas
+    " set guifont=InputMono:h12,Consolas:h11,Consolas
+    set guifont=Noto\ Mono:h12,Consolas:h11,Consolas
 else
-    set guifont=InputMono\ 11,Consolas\ 11,Consolas
+    " set guifont=InputMono\ 12,Consolas\ 11,Consolas
+    set guifont=Noto\ Mono\ 12,Consolas\ 11,Consolas
 endif
 
 " No blinking in (a)ll modes.
