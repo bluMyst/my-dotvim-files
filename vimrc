@@ -32,6 +32,9 @@ Plug 'junegunn/vim-easy-align'
 " git frontend for vim
 Plug 'tpope/vim-fugitive'
 
+" it's fuckin' NERDTree
+Plug 'preservim/nerdtree'
+
 " 'incsearch' for :s, :sm, and :sno
 Plug 'markonm/traces.vim'
 
@@ -43,6 +46,7 @@ Plug 'leafo/moonscript-vim'
 Plug 'kompowiec/CBOT.vim'
 Plug 'sirtaj/vim-papyrus'
 Plug 'gabrielelana/vim-markdown'
+Plug 'glench/vim-jinja2-syntax'
 " }}}2
 
 " Python autocomplete with jedi
