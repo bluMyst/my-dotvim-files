@@ -125,6 +125,11 @@ let g:vimwiki_list = [{
     \ 'auto_export': 1,
 \ }]
 
+" Vimwiki has a feature called 'Temporary Wikis', that will treat every file
+" with configured file-extension as a wiki. To disable this feature add this
+" to your vimrc
+let g:vimwiki_global_ext = 0
+
 "------------------------------------------------------------
 " Features {{{1
 "
