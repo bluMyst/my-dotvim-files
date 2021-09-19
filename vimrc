@@ -47,6 +47,7 @@ Plug 'kompowiec/CBOT.vim'
 Plug 'sirtaj/vim-papyrus'
 Plug 'gabrielelana/vim-markdown'
 Plug 'glench/vim-jinja2-syntax'
+Plug 'DaeZak/crafttweaker-vim-highlighting'
 " }}}2
 
 " Python autocomplete with jedi
