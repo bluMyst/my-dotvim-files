@@ -11,7 +11,7 @@
 " http://colorswat.ch/vim/list
 
 " See the plugins in vimrc for a list of colorschems you can choose from.
-colorscheme dracula
+colorscheme molokai
 
 " Use [c]onsole dialogs instead of popup dialogs
 set guioptions='c'
@@ -39,10 +39,9 @@ if has("unix") && system("hostname -s") == "hermes\n"
     set guifont=Noto\ Mono\ 10,Consolas\ 11,Consolas
 elseif has("gui_win32")
     " set guifont=InputMono:h12,Consolas:h11,Consolas
-    set guifont=Noto\ Mono:h12,Consolas:h11,Consolas
+    set guifont=Noto\ Mono:h11,Consolas:h11,Consolas
 else
-    " set guifont=InputMono\ 12,Consolas\ 11,Consolas
-    set guifont=Noto\ Mono\ 12,Consolas\ 11,Consolas
+    set guifont=Noto\ Mono\ 11,Consolas\ 11,Consolas
 endif
 
 " No blinking in (a)ll modes.
