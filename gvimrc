@@ -36,12 +36,12 @@ set guioptions+='gt'
 " (InputMono is patched out-of-the-box)
 if has("unix") && system("hostname -s") == "hermes\n"
     " set guifont=InputMono\ 10,Consolas\ 11,Consolas
-    set guifont=Noto\ Mono\ 10,Consolas\ 11,Consolas
+    set guifont=Noto\ Mono\ 10,mononoki\ 11,Consolas\ 11,Consolas
 elseif has("gui_win32")
     " set guifont=InputMono:h12,Consolas:h11,Consolas
-    set guifont=Noto\ Mono:h11,Consolas:h11,Consolas
+    set guifont=Noto\ Mono:h11,mononoki:h13,Consolas:h11,Consolas
 else
-    set guifont=Noto\ Mono\ 11,Consolas\ 11,Consolas
+    set guifont=Noto\ Mono\ 11,mononoki\ 13,Consolas\ 11,Consolas
 endif
 
 " No blinking in (a)ll modes.
