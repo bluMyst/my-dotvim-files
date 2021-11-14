@@ -38,6 +38,10 @@ Plug 'preservim/nerdtree'
 " 'incsearch' for :s, :sm, and :sno
 Plug 'markonm/traces.vim'
 
+" orgmode for vim
+" (there's a better plugin for nvim: kristijanhusak/orgmode.nvim)
+Plug 'jceb/vim-orgmode'
+
 " Syntax highlighting for different languages {{{2
 Plug 'PProvost/vim-ps1'
 Plug 'kchmck/vim-coffee-script'
